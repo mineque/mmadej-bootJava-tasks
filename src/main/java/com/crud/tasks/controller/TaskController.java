@@ -15,15 +15,20 @@ public class TaskController {
 
     @RequestMapping(method = RequestMethod.GET, value = "getTasks")
     public List<TaskDto> getTasks(){
-        return new ArrayList<>();
+        List<TaskDto> tasks = new ArrayList<>();
+        tasks.add(new TaskDto((long)1,"Title1","Content 1"));
+        tasks.add(new TaskDto((long)1,"Title2","Content 2"));
+        tasks.add(new TaskDto((long)1,"Title3","Content 3"));
+        tasks.add(new TaskDto((long)1,"Title4","Content 4"));
+        return tasks;
     }
     @RequestMapping(method = RequestMethod.GET, value = "getTask")
     public TaskDto getTask(String taskId){
         return new TaskDto((long)1,"test title","conent");
     }
     @RequestMapping(method = RequestMethod.DELETE, value = "deleteTask")
-    public void deleteTask(String taskId) {
-
+    public String deleteTask(String taskId) {
+        return "TASK DELETED";
     }
     @RequestMapping(method = RequestMethod.PUT, value = "updateTasks")
     public TaskDto updateTask(TaskDto taskDto) {
