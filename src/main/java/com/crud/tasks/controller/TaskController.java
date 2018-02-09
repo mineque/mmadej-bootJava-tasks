@@ -14,12 +14,12 @@ public class TaskController {
 
     @RequestMapping(method = RequestMethod.GET, value = "getTasks")
     public List<TaskDto> getTasks(){
-        List<TaskDto> tasks = new ArrayList<>();
-        tasks.add(new TaskDto((long)1,"Title1","Content 1"));
-        tasks.add(new TaskDto((long)1,"Title2","Content 2"));
-        tasks.add(new TaskDto((long)1,"Title3","Content 3"));
-        tasks.add(new TaskDto((long)1,"Title4","Content 4"));
-        return tasks;
+//        List<TaskDto> tasks = new ArrayList<>();
+//        tasks.add(new TaskDto((long)1,"Title1","Content 1"));
+//        tasks.add(new TaskDto((long)1,"Title2","Content 2"));
+//        tasks.add(new TaskDto((long)1,"Title3","Content 3"));
+//        tasks.add(new TaskDto((long)1,"Title4","Content 4"));
+        return new ArrayList<>();
     }
     @RequestMapping(method = RequestMethod.GET, value = "getTask")
     public TaskDto getTask(String taskId){
