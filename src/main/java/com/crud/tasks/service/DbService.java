@@ -19,12 +19,8 @@ public class DbService {
     public Optional<Task> getTaskById(Long id){
         return repository.findById(id);
     }
+
+    public Task saveTask(final Task task) {
+        return repository.save(task);
+    }
 }
-
-
-
-/*Utwórz nową metodę w serwisie bazy danych - DbService, służącą do pobierania zadań przy użyciu id zadania.
-Jeśli będziesz miał problemy z wykonaniem zadania, spróbuj najpierw poszukać informacji na własną rękę -
-to nieodłączny element nauki oraz pracy jako programista :)
- */
-
